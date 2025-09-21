@@ -49,7 +49,7 @@ const MetricCard = ({
       case 'primary':
         return 'text-black dark:text-black'
       case 'purple':
-        return 'text-red-500 dark:text-black'
+        return 'text-black dark:text-black'
       case 'secondary':
         return 'text-black dark:text-white'
       case 'neutral':
