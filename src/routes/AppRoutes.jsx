@@ -1,6 +1,7 @@
 import { Routes, Route, Navigate } from 'react-router'
 import { Suspense, lazy } from 'react'
 import Layout from '@/components/layout/Layout'
+import LoadingSkeleton from '@/components/shared/LoadingSkeleton'
 
 
 
@@ -11,7 +12,7 @@ const Orders = lazy(() => import('@/pages/Orders'))
 
 const AppRoutes = () => {
   return (
-    <Suspense fallback={<div > Loading...</div>}>
+    <Suspense fallback={<LoadingSkeleton/>}>
       <Routes>
         
         
