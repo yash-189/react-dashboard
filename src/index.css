@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+
+    --white: 0 0% 100%;
+    --black: 0 0% 11%;
+    --primary-blue: 201 100% 95%;
+    --primary-light: 210 33% 98%;
+    --primary-purple: 215 49% 93%;
+    --primary-brand-light: 0 0% 11%;
+    --primary-brand-dark: 239 78% 87%;
+    --secondary-cyan: 205 40% 76%;
+    --secondary-indigo: 231 94% 79%;
+    --secondary-blue: 202 100% 85%;
+    --secondary-mint: 124 59% 83%;
+    --status-purple: 238 51% 70%;
+    --status-green: 158 39% 47%;
+    --status-yellow: 40 100% 67%;
+    --status-blue: 201 59% 59%;
+
+    --text-primary: 0 0% 11%;
+    
+
+    --sidebar-width: 13.25rem;   /* 212px */
+    
+    /* Icon Sizes */
+    --icon-sm: 1.25rem;          /* 20px */
+    --icon-md: 1.5rem;           /* 24px */
+    --icon-lg: 1.75rem;          /* 28px */
+    
+    /* Spacing */
+    --spacing-xs: 0.25rem;       /* 4px */
+    --spacing-sm: 0.5rem;        /* 8px */
+    --spacing-md: 1rem;          /* 16px */
+    --spacing-lg: 1.25rem;       /* 20px */
+    --spacing-xl: 1.75rem;       /* 28px */
+    
+    /* Typography */
+    --text-xs: 0.75rem;          /* 12px */
+    --text-sm: 0.875rem;         /* 14px */
+    --text-lg: 1.5rem;           /* 24px */
+    --leading-tight: 1.125rem;    /* 18px */
+    --leading-normal: 1.25rem;    /* 20px */
+    --leading-relaxed: 2.25rem;   /* 36px */
+    
+    /* Light Theme */
+    --background: var(--white);
+    --foreground: var(--black);
+    --card: var(--white);
+    --card-foreground: var(--black);
+    --primary: var(--black);
+    --secondary: var(--primary-light);
+    --secondary-foreground: var(--black);
+    --muted: var(--primary-light);
+    --muted-foreground: var(--black); /* with 40% opacity */
+    --border: var(--black); /* with 10% opacity */
+    --input: var(--black); /* with 5% opacity - hover-bg */
+    --radius: 0.5rem; /* 8px */
+    
+    /* Chart Colors */
+    --chart-1: var(--secondary-cyan);
+    --chart-2: var(--secondary-indigo);
+    --chart-3: var(--secondary-blue);
+    --chart-4: var(--secondary-mint);
+    --chart-5: var(--primary-brand-dark);
+    
+    /* Additional Theme Colors */
+    --sidebar-stroke: var(--white); /* with 10% opacity */
+    --subgroup-text: var(--black); /* with 40% opacity */
+    --chart-axis-text: var(--black); /* with 40% opacity */
+    --chart-bg: var(--primary-light);
+    --table-border: var(--black); /* with 20% opacity */
+    --header-bg: var(--black); /* with 10% opacity */
+--icon-color: var(--black);
+    
+    --chart-axis-text: 0 0% 11% / 0.4; /* 40% opacity */
+  --muted-foreground: 0 0% 11% / 0.4; /* 40% opacity */
+  --subgroup-text: 0 0% 11% / 0.4; /* 40% opacity */
+  --border: 0 0% 11% / 0.1; /* 10% opacity */
+  --input: 0 0% 11% / 0.05; /* 5% opacity */
+  --table-border: 0 0% 11% / 0.2; /* 20% opacity */
+  --header-bg: 0 0% 11% / 0.1; /* 10% opacity */
+  }
+
+  .dark {
+    /* Dark Theme */
+    --background: var(--black);
+    --foreground: var(--white);
+    --card: var(--black);
+    --card-foreground: var(--white);
+    --primary: var(--white);
+
+    --secondary: var(--white); /* with 5% opacity */
+    --secondary-foreground: var(--white);
+    --muted: var(--white); /* with 5% opacity */
+    --muted-foreground: var(--white); /* with 40% opacity */
+    --border: var(--black); /* with 10% opacity */
+    --input: var(--white); /* with 5% opacity - hover-bg */
+    
+    /* Chart Colors - Same */
+    --chart-1: var(--secondary-cyan);
+    --chart-2: var(--secondary-indigo);
+    --chart-3: var(--secondary-blue);
+    --chart-4: var(--secondary-mint);
+    --chart-5: var(--primary-brand-dark);
+    
+    /* Additional Theme Colors */
+    --sidebar-stroke: var(--black); /* with 10% opacity */
+    --subgroup-text: var(--white); /* with 40% opacity */
+    --chart-axis-text: var(--white); /* with 40% opacity */
+    --chart-bg: var(--white); /* with 5% opacity */
+    --table-border: var(--black); /* with 20% opacity */
+    --header-bg: var(--black); /* with 10% opacity */
+--icon-color: var(--white);
+    --chart-axis-text: 0 0% 100% / 0.4; /* 40% opacity */
+  --muted-foreground: 0 0% 100% / 0.4; /* 40% opacity */
+  --subgroup-text: 0 0% 100% / 0.4; /* 40% opacity */
+  --secondary: 0 0% 100% / 0.05; /* 5% opacity */
+  --muted: 0 0% 100% / 0.05; /* 5% opacity */
+  --input: 0 0% 100% / 0.05; /* 5% opacity */
+  --chart-bg: 0 0% 100% / 0.05; /* 5% opacity */
+  }
+
+  /* Responsive Breakpoints */
+  @media (max-width: 90rem) { /* 1440px */
+    :root {
+      --sidebar-width: 12rem; /* Slightly smaller */
+    }
+  }
+
+  @media (max-width: 48rem) { /* 768px */
+    :root {
+      --sidebar-width: 100vw; /* Full width on mobile */
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 30rem) { /* 480px */
+    :root {
+      font-size: 12px;
+      --spacing-md: 0.75rem;
+      --spacing-lg: 1rem;
+    }
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+
+/* ===== Scrollbar CSS ===== */
+*{
+  scroll-behavior: smooth;
+}
+
+*::-webkit-scrollbar {
+  width: 0.2rem;
+  height: 0.2rem;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #b4b4b461;
+  border-radius: 0.7rem;
+  width: 0.2rem;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 0.7rem;
+  width: 0.2rem;
+}
+
+/* Browsers without `::-webkit-scrollbar-*` support */
+@supports not selector(::-webkit-scrollbar) {
+  * {
+      scrollbar-width: thin;
+      scrollbar-color: #a2a2a2 #cfd7c7;
+  }
+}
