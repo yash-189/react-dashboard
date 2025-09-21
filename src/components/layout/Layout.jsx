@@ -8,7 +8,7 @@ import { cn } from '@/lib/utils'
 const Layout = () => {
   const location = useLocation()
   const isDashboard = location.pathname === '/' || location.pathname === '/dashboard'
-  const { isOpen } = useSidebar()
+  const { isOpen, isRightOpen } = useSidebar()
 
   return (
     <div className="h-screen flex overflow-hidden">
@@ -16,7 +16,6 @@ const Layout = () => {
      
       <div className={cn(
         "flex-1 flex flex-col min-w-0 transition-all duration-300 ease-in-out",
-
         "md:ml-0",
         isOpen && "md:ml-[var(--sidebar-width)]"
       )}>
@@ -32,16 +31,16 @@ const Layout = () => {
           </main>
         </div>
       </div>
-      
-      {isDashboard && (
-        <div className={cn(
-          "hidden 2xl:flex w-80 flex-shrink-0 transition-all duration-300 ease-in-out",
-
-          isOpen && "md:mr-0"
-        )}>
+     
+      {isRightOpen && (
+        <div className="hidden md:block w-80 flex-shrink-0">
           <RightSidebar />
         </div>
       )}
+      
+      <div className="md:hidden">
+        <RightSidebar />
+      </div>
     </div>
   )
 }

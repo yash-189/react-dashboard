@@ -11,6 +11,7 @@ import Breadcrumb from '../ui/Breadcrumb'
 import { ClockIcon, NotificationIcon, StarIcon, SunIcon, ToggleIcon } from '../icons';
 import { ModeToggle } from '../shared/mode-toggle';
 import SidebarToggle from '../SidebarToggle';
+import RightSidebarToggle from '../RightSidebarToggle';
 
 
 const Header = () => {
@@ -38,7 +39,7 @@ const Header = () => {
         <ModeToggle/>
         <IconButton icon={ClockIcon} />
         <IconButton icon={NotificationIcon}/>
-        <IconButton icon={ToggleIcon} />
+        <RightSidebarToggle/>
         </div>
       </div>
     </header>

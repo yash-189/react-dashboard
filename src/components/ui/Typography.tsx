@@ -164,8 +164,8 @@ const Typography = React.forwardRef<HTMLElement, TypographyProps & React.HTMLAtt
       "card-subtitle": "p",
 
       // Data Display
-      "table-header": "th",
-      "table-cell": "td",
+      "table-header": "div",
+      "table-cell": "span",
       "metric-value": "div",
       "status-text": "span",
 

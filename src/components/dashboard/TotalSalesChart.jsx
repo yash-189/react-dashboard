@@ -20,7 +20,7 @@ export function TotalSales() {
         <Typography variant="card-title">Total Sales</Typography>
         
         <div className="h-[14.5rem]">
-          <div className="h-[4.5rem] flex items-center justify-center">
+          <div className="h-[6rem] flex items-center justify-center">
             <div className="relative">
               <div className="h-[120px] w-[120px]">
                 <PieChart 
@@ -28,7 +28,7 @@ export function TotalSales() {
                   innerRadius={35} 
                   outerRadius={55} 
                   paddingAngle={4} 
-                  cornerRadius={3} 
+                  cornerRadius={4} 
                 />
               </div>
 

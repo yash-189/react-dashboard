@@ -18,9 +18,9 @@ interface PieChartProps {
 
 export function PieChart({
   data,
-  innerRadius = 60,
+  innerRadius = 20,
   outerRadius = 100,
-  paddingAngle = 2,
+  paddingAngle = 1,
   cornerRadius = 8,
   className = "",
 }: PieChartProps) {

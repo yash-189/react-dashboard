@@ -105,7 +105,7 @@ export function DataTableHeader({ title, onAdd, searchValue, onSearchChange, sea
             </DialogTrigger>
             <DialogContent>
               <DialogHeader>
-                <DialogTitle>Add New {title?.slice(0, -1) || "Item"}</DialogTitle>
+                <DialogTitle>Add New Order</DialogTitle>
                 <DialogDescription>
                   Create a new {title?.toLowerCase().slice(0, -1) || "item"} by filling out the form below.
                 </DialogDescription>
@@ -113,16 +113,17 @@ export function DataTableHeader({ title, onAdd, searchValue, onSearchChange, sea
               <div className="py-4">
                 <p className="text-sm text-gray-600">Add form would go here...</p>
                 <div className="flex justify-end gap-2 mt-4">
-                  <Button variant="outline" onClick={() => setShowAddDialog(false)}>
+                  <Button variant="outline"  onClick={() => setShowAddDialog(false)}>
                     Cancel
                   </Button>
                   <Button
+                  className="bg-primary text-white dark:text-black hover:bg-primary/90"
                     onClick={() => {
                       onAdd()
                       setShowAddDialog(false)
                     }}
                   >
-                    Add {title?.slice(0, -1) || "Item"}
+                    Add Order
                   </Button>
                 </div>
               </div>
