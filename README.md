@@ -10,10 +10,10 @@ A pixel-perfect build of the **ByeWind eCommerce dashboard** design, with a serv
 
 ## Features
 
-- **Dashboard:** KPI cards, projections vs actuals bar chart, revenue line chart, revenue by location map, top products table, total sales donut chart
-- **Orders:** server-side pagination, sorting, filtering, search and row selection
-- **Light and dark themes**
-- **Collapsible sidebars** for navigation, notifications and activity
+- Dashboard with KPI cards, a projections vs actuals bar chart, a revenue line chart, revenue by location on a map, a top products table and a total sales donut chart
+- Orders table with server-side pagination, sorting, filtering, search and row selection
+- Light and dark themes
+- Collapsible sidebars for navigation, notifications and activity
 - Loading, empty and error states
 
 ## Tech stack
@@ -36,9 +36,9 @@ src/
 └── pages/        # Dashboard, Orders
 ```
 
-- **Server state lives in React Query** (caching, pagination). UI state such as theme and sidebars lives in context.
-- **API calls are kept in `api/`**, so components only render.
-- **Routes are code-split** with `React.lazy`.
+- Server state lives in React Query (caching, pagination). UI state such as theme and sidebars lives in context.
+- API calls are kept in `api/`, so components only render.
+- Routes are code-split with `React.lazy`.
 
 ## Run locally
 
