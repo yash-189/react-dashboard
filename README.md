@@ -51,4 +51,4 @@ Open http://localhost:5173 for the dashboard and `/ecommerce/orders` for orders.
 
 ## Credits
 
-UI design by [ByeWind](https://www.figma.com/community/file/1288200489613010131) (Figma community).
+UI design by ByeWind (Figma community).
